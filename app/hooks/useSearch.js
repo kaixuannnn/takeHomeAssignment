@@ -28,7 +28,6 @@ const useSearch = () => {
   };
   const getLastRetrievedDate = async () => {
     const time = await storage.get(LAST_RETRIEVE);
-    console.log(moment(time).format('MMMM Do YYYY, h:mm:ss a'));
     setRetriveDate(moment(time).format('MMMM Do YYYY, h:mm:ss a'));
   };
 

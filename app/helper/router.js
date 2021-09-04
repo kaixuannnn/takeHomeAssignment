@@ -39,7 +39,10 @@ export const HomeNavigator = () => {
 const Stack = createStackNavigator();
 export const SearchNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerBackTitleVisible: false,
+      }}>
       <Stack.Screen name="Search" component={SearchScreen} />
       <Stack.Screen name="PokemonDetail" component={PokemonDetailScreen} />
     </Stack.Navigator>

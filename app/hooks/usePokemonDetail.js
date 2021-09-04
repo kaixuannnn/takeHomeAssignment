@@ -39,6 +39,7 @@ const usePokemonDetail = () => {
       );
       setKantoList(arr);
     } catch (error) {
+      navigation.goBack();
       Alert.alert('Error', err);
     }
   };
