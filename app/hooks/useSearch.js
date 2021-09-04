@@ -14,10 +14,9 @@ const useSearch = () => {
   const [retriveDate, setRetriveDate] = useState('');
   const navigation = useNavigation();
 
-  useEffect(() => {
-    getAllPokemon();
-    getLastRetrievedDate();
-  }, []);
+  useEffect(() => getAllPokemon(), []);
+
+  useEffect(() => getLastRetrievedDate(), [all]);
 
   useEffect(() => {
     const arr = all.filter(item => item.name.includes(input));

@@ -10,11 +10,12 @@ import PokemonDetailScreen from '../screens/PokemonDetailScreen';
 const Tab = createBottomTabNavigator();
 export const HomeNavigator = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
+    <Tab.Navigator>
       <Tab.Screen
-        name="Search"
-        component={SearchScreen}
+        name="SearchNav"
+        component={SearchNavigator}
         options={{
+          headerShown: false,
           tabBarLabel: 'Search',
           tabBarIcon: ({color, size}) => (
             <Icon name="search" color={color} size={size} />
@@ -35,16 +36,12 @@ export const HomeNavigator = () => {
   );
 };
 
-const MainStack = createStackNavigator();
-export const MainNavigator = () => {
+const Stack = createStackNavigator();
+export const SearchNavigator = () => {
   return (
-    <MainStack.Navigator>
-      <MainStack.Screen
-        name="Pokemon"
-        component={HomeNavigator}
-        options={{headerShown: false}}
-      />
-      <MainStack.Screen name="PokemonDetail" component={PokemonDetailScreen} />
-    </MainStack.Navigator>
+    <Stack.Navigator>
+      <Stack.Screen name="Search" component={SearchScreen} />
+      <Stack.Screen name="PokemonDetail" component={PokemonDetailScreen} />
+    </Stack.Navigator>
   );
 };
