@@ -1,0 +1,5 @@
+export const MY_POKEMON_LIST = 'MY_POKEMON_LIST';
+export const ALL_POKEMON = 'ALL_POKEMON';
+export const LAST_RETRIEVE = 'LAST_RETRIEVE';
+
+export const REFRESH_MY_LIST = 'REFRESH_MY_LIST';
